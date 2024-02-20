@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta | Academia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Cadastre-Se</h1>
+            <input type="text" name="nome" id="nome" required placeholder="Nome">
+            <input type="email" name="nome" id="nome" required
+            placeholder="E-mail">
+            <input type="password" name="nome" id="nome" required placeholder="Senha">
+            <a href="" class="btn" id="cadastro">
+                Cadastre-Se
+            </a>
+            <a href="../paginaLogin.html" class="btn vazado">
+                Voltar
+            </a>
+        </section>
+    </main>
+
+    <script>
+        let botaoCadastro = document.querySelector('#cadastro')
+
+        botaoCadastro.onclick = ()=>{
+            let nome, email, pass;
+            nome = document.querySelector('input[type="text"]').value
+            email = document.querySelector('input[type="email"]').value
+            pass = document.querySelector('input[type="password"]').value
+
+            if(localStorage.getItem('@e-mail') == null)
+            {
+                localStorage.setItem('@e-mail', email)
+                localStorage.setItem('@nome', nome)
+                localStorage.setItem('@pass', pass)
+
+                alert('Cadastro Concluidoo co Sucesso!')
+
+            }
+            else {
+                alert(`Apenas um login por dispositivo, Entre com e-mail ${localStorage.getItem('@e-mail')}`)
+            }
+        }
+    </script>
+</body>
+</html>

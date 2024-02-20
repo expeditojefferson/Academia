@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar Conta | Academia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Entrar</h1>
+            <input type="email" name="nome" id="nome" required
+            placeholder="E-mail">
+            <input type="password" name="nome" id="nome" required placeholder="Senha">
+            <a href="" class="btn" id="entrar">
+                Entrar
+            </a>
+            <a href="../paginaLogin.html" class="btn vazado">
+                Voltar
+            </a>
+        </section>
+    </main>
+
+    <script>
+        let entrar = document.querySelector('#entrar')
+
+        entrar.onclick = ()=>{
+            let email = document.querySelector('input[type="email"]').value
+
+            let pass = document.querySelector('input[type="password"]').value
+
+            if(email == localStorage.getItem('@e-mail') &&
+                pass == localStorage.getItem('@pass'))
+                {
+                    //jeffinho@gmail.com
+                    // Colocar o link do conteudo principal
+                    entrar.href = "../paginaLogin.html"
+                    
+                }
+                else {
+                    
+                    alert('Email ou Senha incorreto')
+                }
+        }
+    </script>
+</body>
+</html>

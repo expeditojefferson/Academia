@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+
+            background-color: #ffffff;
+            background-image: url("assets/SiteAcademia/wallpaper.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        section.container {
+            width: 90%;
+            height: 300px;
+            display: flex;
+            color: #fff;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            text-align: center;
+        }
+
+        div.botoes {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 20px;
+        } 
+
+        .vazado {
+            border: 1px solid #fff;
+            background-color: transparent;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h1>Fitness Home</h1>
+            <p id="frase-motivacional">
+                
+            </p>
+            <div class="botoes">
+                <a href="paginas/signUp.html" class="btn">Sing Up</a>
+                <a href="paginas/signIn.html" class="btn vazado">Sing In</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.onload = ()=>{
+            listaDeFrases = ['Um dia você vai perceber que a academia não transforma só o seu corpo, mas também a sua vida.',
+            'O mais difícil de treinar é sair de casa... Depois, o corpo agradece!',
+            'A sensação de dever cumprido alimenta o corpo e alegra a alma.',
+            'Treine com frequência e você descobrirá que é muito mais forte do que imagina.',
+            'Muitos problemas na cabeça? Corra! Não há nada melhor do que sentir que eles estão ficando para trás.',
+            'Sorte é o que acontece quando a preparação encontra a oportunidade.',
+            'Transforme o desânimo em determinação e faça da academia o seu palco de superação.',
+            'Não importa o quão difícil seja o treino, lembre-se sempre de que você é mais forte do que pensa.',
+            'Quantos mais peso eu levanto, mais forte eu descubro que sou.',
+            'Jamais se esqueça do objetivo que te levou a começar a academia.',
+            'Não desista da academia, tente encontrar uma rotina em que o exercício seja uma das partes boas do seu dia.',
+            'A dor do treino é temporária, mas a satisfação da conquista é para sempre. Vamos lá!',
+            'Cada gota de suor é uma vitória contra a preguiça e uma aproximação do seu objetivo. Continue firme!',
+            'Escolher uma vida fitness é uma jornada, não um destino. É sobre evoluir a cada dia, se desafiando a cada treino e descobrindo o seu potencial.',
+            'Não se preocupe com a opinião dos outros, o importante é que você está se esforçando para ser a sua melhor versão.',
+            'A academia é como a vida: cheia de obstáculos, mas quanto mais você se supera, mais você gosta de lutar.',
+            'A academia é um hábito que logo vira um vício bom. Aguente firme, você ainda vai amar isto.',
+            'Resultado sem esforço não existe. Abrace o treino e colha os frutos de uma vida saudável e feliz.',
+            'Seu corpo é um templo, trate-o com amor e dedicação.',
+            'A parte mais difícil da motivação é levantar do sofá e colocar a roupa da academia.']
+
+            let frase = document.querySelector('#frase-motivacional')
+
+            let fraseAleatoria = Math.floor(Math.random() * listaDeFrases.length)
+            
+
+            frase.innerText = `${listaDeFrases[fraseAleatoria]}`
+        }
+    </script>
+</body>
+</html>
