@@ -21,8 +21,9 @@ header {
     margin: 0px 5%;
 }
 
-header h1 {
+header > h1 {
     padding: 5px 0px;
+    margin: auto;
 }
 
 div.treino-de-hoje {
@@ -34,7 +35,7 @@ div.treino-de-hoje {
 }
 
 div.treino-de-hoje > h3 {
-    padding-left: 3%;
+    /**/
 }
 
 div.card-container {
@@ -80,3 +81,17 @@ div.duracao-treino {
     align-items: center;
     gap: 5px;
 }
+
+/*  Main    */
+
+main {
+    margin: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h3 {
+    padding: 10px;
+}
+
