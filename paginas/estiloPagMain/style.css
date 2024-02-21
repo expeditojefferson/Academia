@@ -29,6 +29,7 @@ div.treino-de-hoje {
     padding: 10px 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
 }
 
@@ -39,6 +40,7 @@ div.treino-de-hoje > h3 {
 div.card-container {
     height: 200px;
     max-width: 500px;
+    width: 100%;
     border-radius: 15px;
 
     background-image: url('../../assets/SiteAcademia/wallpaper.jpg');
