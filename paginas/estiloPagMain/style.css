@@ -46,7 +46,8 @@ div.card-container {
 
     background-image: url('../../assets/SiteAcademia/wallpaper.jpg');
     background-repeat: no-repeat;
-    background-position: 50% 35%;
+    background-position: 50% 50%;
+    background-size: cover;
     color: white;
     display: flex;
     flex-direction: row;
@@ -95,3 +96,57 @@ main > h3 {
     padding: 10px;
 }
 
+section.treinos {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    /* Numero de linhas */
+    grid-template-rows: 150px 150px 150px;
+    gap: 10px;
+}
+
+div.card-treino {
+    background-color: yellow;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+div.card-treino a {
+    text-decoration: none;
+}
+
+div.peito {
+    background-image: url('../../assets/SiteAcademia/treino-de-peito.jpg');
+}
+div.costas {
+    background-image: url('../../assets/SiteAcademia/treino-de-costas.jpg');
+}
+div.coxa {
+    background-image: url('../../assets/SiteAcademia/treino-de-coxa.jpg');
+}
+div.deltoides {
+    background-image: url('../../assets/SiteAcademia/treino-de-deltoides.jpg');
+}
+div.braco {
+    background-image: url('../../assets/SiteAcademia/treino-de-braço.jpg');
+}
+div.full-body {
+    background-image: url('../../assets/SiteAcademia/wallpaper.jpg');
+}
+
+div.conteudo {
+    height: 100%;
+    background-image: linear-gradient(to top, black, transparent);
+    display: flex;
+    align-items: flex-end;
+}
+
+div.conteudo > h3 {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
